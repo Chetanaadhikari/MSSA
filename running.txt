@@ -1,0 +1,34 @@
+.headers on
+
+-- Name:      coolstuff.sql
+-- Author:    chetana Adhikari
+-- Date:      August 14, 2017
+-- Purpose:   To create a cool database
+
+drop table if exists running;
+
+Create table running  (
+                     id int,
+                     name text,
+                     city test,
+                     distanceMiles int
+);
+
+insert into running values ( 1, "John", "Pittsburgh", 5);
+insert into running values ( 2, "Rita", "Denver", 6);
+insert into running values ( 3, "Casey", "Columbus", 5);
+insert into running values ( 4, "Kristina", "Atlanta", 4);
+
+select * from running where distanceMiles = 5;
+id|name|city|distanceMiles
+1|John|Pittsburgh|5
+3|Casey|Columbus|5
+select * from running where city = "Denver";
+id|name|city|distanceMiles
+2|Rita|Denver|6
+select * from running where distanceMiles > 5;
+id|name|city|distanceMiles
+2|Rita|Denver|6
+select * from running where distanceMiles < 4;
+drop table if exists running;
+
